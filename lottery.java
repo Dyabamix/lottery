@@ -6,13 +6,13 @@ public class Lottery {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         int[] enteredNumber = new int[3];
+        int choice = 0;
         System.out.println("Привет! Надеюсь сегодня тебе повезёт!!!");
-        int choice;
 
 
 //Загадываем числа
         do {
-            System.out.println("Начнём......!");
+            System.out.println(choice == 0? "Начнём......!" : "Так держать!!! Продолжаем...");
             int[] hiddenNumber = new int[3];
             for (int i = 0; i < 3; i++) {
                 hiddenNumber[i] = random.nextInt(22);
@@ -52,9 +52,9 @@ public class Lottery {
 //Выводим результат
             System.out.println(numOfMatches == 0 ? "К сожалению ты проиграл(а)..." : ("Поздравляю у тебя " + numOfMatches + " совпадений!!!"));
             System.out.println("Загаданные числа:" + hiddenNumber[0] + " " + hiddenNumber[1] + " " + hiddenNumber[2]);
-            System.out.println("Хочешь сыграть заново? Да-1; Нет-0; ");
+            System.out.print("Хочешь сыграть заново? Да-1; Нет-0; ");
             choice = scanner.nextInt();
-
+            System.out.println(choice == 0? "Надеюсь ты вернёшься..." : "");
         } while (choice == 1);
     }
 }
