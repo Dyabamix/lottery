@@ -21,6 +21,7 @@ public class Lottery {
 
                 }
             }
+          //Для проверки  System.out.println(hiddenNumber[0] + " " + hiddenNumber[1] + " " + hiddenNumber[2] );
 
 
 //Вводим числа
@@ -34,6 +35,7 @@ public class Lottery {
 
                 }
             }
+
 
 //Считаем совпадения
             int numOfMatches = 0;
@@ -50,7 +52,7 @@ public class Lottery {
             }
 
 //Выводим результат
-            System.out.println(numOfMatches == 0 ? "К сожалению ты проиграл(а)..." : ("Поздравляю у тебя " + numOfMatches + " совпадений!!!"));
+            System.out.println(numOfMatches == 0 ? "К сожалению ты проиграл(а)..." : ("Поздравляю у тебя " + numOfMatches + (numOfMatches == 1? " совпадение" : " совпадения!!!")));
             System.out.println("Загаданные числа:" + hiddenNumber[0] + " " + hiddenNumber[1] + " " + hiddenNumber[2]);
             System.out.print("Хочешь сыграть заново? Да-1; Нет-0; ");
             choice = scanner.nextInt();
