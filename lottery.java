@@ -21,7 +21,7 @@ public class Lottery {
 
                 }
             }
-          //Для проверки  System.out.println(hiddenNumber[0] + " " + hiddenNumber[1] + " " + hiddenNumber[2] );
+           // System.out.println(hiddenNumber[0] + " " + hiddenNumber[1] + " " + hiddenNumber[2] ); //Для проверки
 
 
 //Вводим числа
@@ -52,7 +52,16 @@ public class Lottery {
             }
 
 //Выводим результат
-            System.out.println(numOfMatches == 0 ? "К сожалению ты проиграл(а)..." : ("Поздравляю у тебя " + numOfMatches + (numOfMatches == 1? " совпадение" : " совпадения!!!")));
+            if (numOfMatches == 0){
+                System.out.println("К сожалению ты проиграл(а)...");
+            } else {
+                if (numOfMatches == 1) {
+                    System.out.println("Поздравляю у тебя 1 совпадение");
+                } else {
+                    System.out.println("Поздравляю у тебя " + numOfMatches + " совпадения");
+                }
+            }
+
             System.out.println("Загаданные числа:" + hiddenNumber[0] + " " + hiddenNumber[1] + " " + hiddenNumber[2]);
             System.out.print("Хочешь сыграть заново? Да-1; Нет-0; ");
             choice = scanner.nextInt();
